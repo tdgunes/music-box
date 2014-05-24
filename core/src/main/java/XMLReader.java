@@ -11,7 +11,6 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Random;
 
 /**
  * Taha Dogan Gunes
@@ -83,9 +82,9 @@ public class XMLReader {
 //            System.out.print(s + ": "); // id of the track
 //            System.out.println(tracks.get(s));
 
-
-            Random r = new Random();
-            if (r.nextInt(100) == 5) {
+//
+//            Random r = new Random();
+//            if (r.nextInt(100) == 5) {
 
 
                 NSDictionary trackInfo = (NSDictionary) tracks.get(s);
@@ -98,13 +97,13 @@ public class XMLReader {
 
                 }
                 trackList.add(hashMap);
-
-
-                if (limit == 100) break;
-
-
-                limit++;
-            }
+//
+//
+//                if (limit == 100) break;
+//
+//
+//                limit++;
+//            }
         }
 
     }

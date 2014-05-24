@@ -76,7 +76,9 @@ public class MusicOntology {
     public DatatypeProperty hasBitRate;
     public DatatypeProperty playCount;
     public DatatypeProperty playDateUTC;
-    public DatatypeProperty playDateAdded;
+    public DatatypeProperty dateAdded;
+    public DatatypeProperty hasLocation;
+
 
 
     public OntClass genre;
@@ -124,17 +126,34 @@ public class MusicOntology {
         playedBy.addRange(artist);
 
 
+
         hasID = ontModel.createDatatypeProperty(ns + "hasID");
+        hasID.addRange(XSD.integer);
 
         hasName = ontModel.createDatatypeProperty(ns + "hasName");
         hasName.addRange(XSD.xstring);
 
         releasedYear = ontModel.createDatatypeProperty(ns + "releasedYear");
+        releasedYear.addRange(XSD.gYear);
+
         hasTotalTime = ontModel.createDatatypeProperty(ns + "hasTotalTime");
+        hasTotalTime.addRange(XSD.xlong);
+
         hasBitRate = ontModel.createDatatypeProperty(ns + "hasBitRate");
+        hasBitRate.addRange(XSD.integer);
+
         playCount = ontModel.createDatatypeProperty(ns + "playCount");
+        playCount.addRange(XSD.integer);
+
         playDateUTC = ontModel.createDatatypeProperty(ns + "playDateUTC");
-        playDateAdded = ontModel.createDatatypeProperty(ns + "playDateAdded");
+        playDateUTC.addRange(XSD.dateTime);
+
+        dateAdded = ontModel.createDatatypeProperty(ns + "dateAdded");
+        dateAdded.addRange(XSD.dateTime);
+
+        hasLocation= ontModel.createDatatypeProperty(ns + "hasLocation");
+        hasLocation.addRange(XSD.xstring);
+
 
 
         addLibraryToOntology();
@@ -155,13 +174,23 @@ public class MusicOntology {
             try {
                 String rawTrack = Utils.cleanStringForOnto(hashMap.get("Name").toString());
                 String rawArtist = Utils.cleanStringForOnto(hashMap.get("Artist").toString());
+                String rawTrackID = hashMap.get("Track ID").toString();
+                String rawLocation = hashMap.get("Location").toString();
+                String rawTotalTime = hashMap.get("Total Time").toString();
+                String rawAlbum = Utils.cleanStringForOnto(hashMap.get("Album").toString());
 
                 System.out.println("Track: " + rawTrack);
                 System.out.println("Artist: " + rawArtist);
+                System.out.println("Track ID: " + rawTrackID);
+                System.out.println("Location: " + rawLocation);
+                System.out.println("Total time: "+ rawTotalTime);
+                System.out.println();
 
                 //preparing trackIndividual
                 Individual trackIndividual = track.createIndividual(ns + rawTrack);
                 Individual artistIndividual = artist.createIndividual(ns + rawArtist);
+                Individual albumIndividual = album.createIndividual(ns + rawAlbum);
+
 
                 //trackIndividual :hasName "songName"
                 Literal trackName = ontModel.createTypedLiteral(rawTrack, XSDDatatype.XSDstring);
@@ -174,8 +203,29 @@ public class MusicOntology {
                 ontModel.add(artistHasName);
 
 
+
                 //trackIndividual :playedBy artistIndividual
                 ontModel.add(ontModel.createStatement(trackIndividual, playedBy, artistIndividual));
+
+                //trackIndividual :onAlbum albumIndividual
+                ontModel.add(ontModel.createStatement(trackIndividual, onAlbum, albumIndividual));
+
+                //trackIndividual :hasID "Track ID"
+                Literal trackID = ontModel.createTypedLiteral(rawTrackID, XSDDatatype.XSDpositiveInteger);
+                Statement hasTrackID = ontModel.createStatement(trackIndividual, hasID, trackID);
+                ontModel.add(hasTrackID);
+
+                //trackIndividual :hasLocation "/somepath/path/"
+                Literal location = ontModel.createTypedLiteral(rawLocation, XSDDatatype.XSDstring);
+                Statement trackHasLocation = ontModel.createStatement(trackIndividual, hasLocation, location);
+                ontModel.add(trackHasLocation);
+
+                //trackIndividual :hasTotalTime 123123
+                Literal totalTime = ontModel.createTypedLiteral(Long.parseLong(rawTotalTime), XSDDatatype.XSDlong);
+                Statement trackHasTotalTime = ontModel.createStatement(trackIndividual, hasTotalTime, totalTime);
+                ontModel.add(trackHasTotalTime);
+
+
             } catch (NullPointerException exception) {
                 continue;
             }

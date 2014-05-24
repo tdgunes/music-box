@@ -8,40 +8,234 @@
     <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scorpions</j.0:hasName>
     <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#AlHirt">
-    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AlHirt</j.0:hasName>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#FacadeofReality(TheEmbrace">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">495177</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/EPICA%20-%20DISCOGRAPHY%20%5BCHANNEL%20NEO%5D/%5B2004%5D%20We%20Will%20Take%20You%20With%20Us/01%20-%20Facade%20of%20Reality%20(The%20Embrace%20That%20Smothers,%20Part%20V).mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4476</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Epica"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FacadeofReality(TheEmbrace</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#ChinaWhite">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">417828</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Scorpions/1989%20Best%20Of%20Rockers%20'n'%20Ballads/15%20-%20Scorpions%20-%20Best%20Of%20Rockers%20'n'%20Ballads%20-%20China%20White.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">3880</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Scorpions"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ChinaWhite</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#SuperMarioBros:Theme">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">252095</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/iTunes/iTunes%20Media/Music/London%20Philharmonic%20Orchestra%20&amp;%20Andrew%20Skeet/The%20Greatest%20Video%20Game%20Music%20(Bonus%20Track%20Edition)/06%20Super%20Mario%20Bros_%20Theme.m4a</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4850</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#LondonPhilharmonicOrchestra&amp;AndrewSkeet"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SuperMarioBros:Theme</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#08FinalDestination">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">283167</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Within%20Temptation%20Discography/(2007)%20The%20Heart%20of%20Everything/08%20Final%20Destination.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">5164</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#WithinTemptation"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">08FinalDestination</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#CharlieFeathers">
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CharlieFeathers</j.0:hasName>
     <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#playDateUTC">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#WalkofShame">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">163687</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/P!nk%20-%20The%20Truth%20About%20Love%20(Deluxe/10%20Walk%20of%20Shame.m4a</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">6148</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#P!nk"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WalkofShame</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasGenre">
+    <rdfs:range rdf:resource="http://www.github.com/tdgunes/music-bot/#Genre"/>
+    <rdfs:domain rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#MoneyHunny">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">196075</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Lana%20Del%20Rey/Unreleased/Other%20song/Lana%20Del%20Rey%20-%20Money%20Hunny.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">5704</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#LanaDelRey"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MoneyHunny</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Honesty">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">224375</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/iTunes/iTunes%20Media/Music/Beyonce%CC%81/I%20Am...Sasha%20Fierce%20(Platinum%20Edition)/16%20Honesty.m4a</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">5824</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Beyoncé"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Honesty</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#PawnShopBlues">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">209005</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Lana%20Del%20Rey/Albums/Lana%20Del%20Rey%20a.k.a.%20Lizzy%20Grant%20%20-%202010%20-%20Lana%20Del%20Ray%20%5BAlbum%5D/09%20Pawn%20Shop%20Blues.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">5352</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#LanaDelRey"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PawnShopBlues</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#releasedYear">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasID">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#ForWhomTheBellTolls">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">292284</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Metallica%20-%20Discography%201983-2008%20(19%20Albums,%2023%20CDs)/Metallica%20-%201999%20-%20S%20&amp;%20M/Metallica%20-%201999%20-%20S%20&amp;%20M%20-%20CD%202/03%20-%20For%20Whom%20The%20Bell%20Tolls.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2846</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Metallica"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ForWhomTheBellTolls</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#TheCranberries">
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TheCranberries</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#onAlbum">
+    <rdfs:range rdf:resource="http://www.github.com/tdgunes/music-bot/#Album"/>
+    <rdfs:domain rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#CantHardlyStandIt">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">168202</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Kill%20Bill%20(Soundtrack)/Vol.2/Kill%20Bill%20(Soundtrack)%20(Vol.2)%20-%2004%20-%20Can't%20Hardly%20Stand%20It%20-%20Charlie%20Feathers.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4816</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#CharlieFeathers"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CantHardlyStandIt</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#13TheSwanSong">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">239595</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Within%20Temptation%20Discography/(2004)%20The%20Silent%20Force/13%20The%20Swan%20Song.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">5148</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#WithinTemptation"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13TheSwanSong</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Rainbow">
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rainbow</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#LanaDelRey">
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LanaDelRey</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#InterviewwithAdontheLiveTracks">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">34220</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/EPICA%20-%20DISCOGRAPHY%20%5BCHANNEL%20NEO%5D/%5B2006%5D%20The%20Road%20to%20Paradiso/10%20-%20Interview%20with%20Ad%20on%20the%20Live%20Tracks.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4574</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Epica"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InterviewwithAdontheLiveTracks</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#NoPain">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">170579</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Megadeth%20-%20Mega%20Collection%20@%20320kps/1996%20-%20Md.45%20-%20The%20Craving%20(Vocals%20-%20Dave%20Mustaine)%20(Re-Mastered)%20%5B2004%5D/10%20-%20No%20Pain.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2212</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#MD45"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NoPain</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#LondonPhilharmonicOrchestra&amp;AndrewSkeet">
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LondonPhilharmonicOrchestra&amp;AndrewSkeet</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Artist">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#EyeOfTheBeholder">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">385671</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Metallica%20-%20Discography%201983-2008%20(19%20Albums,%2023%20CDs)/Metallica%20-%201988%20-%20And%20Justice%20For%20All/03%20-%20Eye%20Of%20The%20Beholder.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2528</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Metallica"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EyeOfTheBeholder</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#CantGetEnough">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">157805</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Scorpions/1979%20Lovedrive/05%20-%20Scorpions%20-%20Lovedrive%20-%20Can't%20Get%20Enough.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">3720</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Scorpions"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CantGetEnough</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#MGMT">
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MGMT</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasLocation">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#AC/DC">
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AC/DC</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#OffToTheRaces-LanaDelRey">
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OffToTheRaces-LanaDelRey</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#CreepingDeath">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">448365</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Metallica%20-%20Discography%201983-2008%20(19%20Albums,%2023%20CDs)/Metallica%20-%201993%20-%20Live%20Shit,%20Binge%20And%20Purge/Metallica%20-%201993%20-%20Live%20Shit,%20Binge%20And%20Purge%20-%20CD%201/02%20-%20Creeping%20Death.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2602</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Metallica"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CreepingDeath</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#One">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">445257</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Metallica%20-%20Discography%201983-2008%20(19%20Albums,%2023%20CDs)/Metallica%20-%201994%20-%20One%20(German%20Single)/01%20-%20Metallica%20-%20One.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2648</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Metallica"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#10TheTruthBeneathTheRose">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">425848</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Within%20Temptation%20Discography/(2007)%20The%20Heart%20of%20Everything/10%20The%20Truth%20Beneath%20The%20Rose.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">5168</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#WithinTemptation"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10TheTruthBeneathTheRose</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Mistreated">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">820924</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Rainbow/11%20-%20Deutschland%20Tournee%201976%20(2006)/Dusseldorf%20(Sept.%2027,%201976)/CD%203/03%20-%20Mistreated.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">3560</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Rainbow"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mistreated</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Lyrics:)">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">297377</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Downloaded%20by%20MediaHuman/Off%20To%20The%20Races%20-%20Lana%20Del%20Rey%20-%20Lyrics%20_).m4a</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">5280</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#OffToTheRaces-LanaDelRey"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lyrics:)</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasName">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Megadeth">
-    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Megadeth</j.0:hasName>
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasBitRate">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#MediaOverkill">
-    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Scorpions"/>
-    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MediaOverkill</j.0:hasName>
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#ForeclosureOfADream">
-    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Megadeth"/>
-    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ForeclosureOfADream</j.0:hasName>
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#SetTheWorldAfire(PaulLaniMix)">
-    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Megadeth"/>
-    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SetTheWorldAfire(PaulLaniMix)</j.0:hasName>
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#SomeSinForNuthin">
-    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#AC/DC"/>
-    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SomeSinForNuthin</j.0:hasName>
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Queen">
     <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Queen</j.0:hasName>
@@ -52,61 +246,56 @@
     <rdfs:domain rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#playDateUTC">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#InvisibleKid">
-    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Metallica"/>
-    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InvisibleKid</j.0:hasName>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Diva">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">200298</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/iTunes/iTunes%20Media/Music/Beyonce%CC%81/I%20Am...Sasha%20Fierce%20(Platinum%20Edition)/02%20Diva.m4a</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">5796</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Beyoncé"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diva</j.0:hasName>
     <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#FriendsWillBeFriends">
-    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Queen"/>
-    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FriendsWillBeFriends</j.0:hasName>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#ComeWhenYouCallMeAmericaver1">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">253752</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Lana%20Del%20Rey/Unreleased/Other%20song/Lana%20Del%20Rey%20-%20Come%20When%20You%20Call%20Me%20America%20%5BVer%201%5D.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">5608</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#LanaDelRey"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ComeWhenYouCallMeAmericaver1</j.0:hasName>
     <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasGenre">
-    <rdfs:range rdf:resource="http://www.github.com/tdgunes/music-bot/#Genre"/>
-    <rdfs:domain rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Diadems">
-    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Megadeth"/>
-    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diadems</j.0:hasName>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#TheTrooper">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">251454</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Iron%20Maiden/Iron%20Maiden%20-%201983%20-%20Piece%20Of%20Mind/05%20The%20Trooper.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1700</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#IronMaiden"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TheTrooper</j.0:hasName>
     <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Nightwish">
-    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nightwish</j.0:hasName>
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#JaneDoe">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">272352</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Within%20Temptation%20Discography/(2008)%20Destroyed/04%20Jane%20Doe.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">5178</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#WithinTemptation"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JaneDoe</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#ShesGotBalls">
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#RimeOfTheAncientMariner">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">819278</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Iron%20Maiden/Iron%20Maiden%20-%201984%20-%20Powerslave/08%20Rime%20Of%20The%20Ancient%20Mariner.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1724</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#IronMaiden"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RimeOfTheAncientMariner</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#GoZone">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">267075</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/ACDC/1988%20-%20Blow%20Up%20Your%20Video/ACDC%20-%20Blow%20Up%20Your%20Video%20-%2004%20-%20Go%20Zone.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1166</j.0:hasID>
     <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#AC/DC"/>
-    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ShesGotBalls</j.0:hasName>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GoZone</j.0:hasName>
     <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Adagio">
-    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Epica"/>
-    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adagio</j.0:hasName>
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#DesperateAndy">
-    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#TheCranberries"/>
-    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DesperateAndy</j.0:hasName>
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#releasedYear">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasID">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#CantStandStill">
-    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#AC/DC"/>
-    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CantStandStill</j.0:hasName>
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#TheCranberries">
-    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TheCranberries</j.0:hasName>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#MD45">
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MD45</j.0:hasName>
     <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Track">
@@ -115,50 +304,84 @@
   <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Album">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#onAlbum">
-    <rdfs:range rdf:resource="http://www.github.com/tdgunes/music-bot/#Album"/>
-    <rdfs:domain rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Ballbreaker(live)">
-    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#AC/DC"/>
-    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ballbreaker(live)</j.0:hasName>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#WhenTwoWorldsCollide">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">377286</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Iron%20Maiden/Iron%20Maiden%20-%201998%20-%20VIrtual%20XI/Iron%20Maiden%20-%2005%20-%20When%20Two%20Worlds%20Collide.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1828</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#IronMaiden"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WhenTwoWorldsCollide</j.0:hasName>
     <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Stargazers">
-    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Nightwish"/>
-    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stargazers</j.0:hasName>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#LiveWire">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">349962</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/ACDC/1976%20-%20T.N.T.%20(Australian)/ACDC%20-%20T.N.T.%20(Australian)%20-%2004%20-%20Live%20Wire.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">930</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#AC/DC"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LiveWire</j.0:hasName>
     <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasTotalTime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#GhostoftheNavigator">
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#WastedYears">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">307591</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Iron%20Maiden/Iron%20Maiden%20-%201986%20-%20Somewhere%20In%20Time/02%20-%20Wasted%20Years.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1728</j.0:hasID>
     <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#IronMaiden"/>
-    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GhostoftheNavigator</j.0:hasName>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WastedYears</j.0:hasName>
     <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Artist">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#TheJack">
-    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#AC/DC"/>
-    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TheJack</j.0:hasName>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#TheLegendOfPaiMei">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">126563</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Kill%20Bill%20(Soundtrack)/Vol.2/Kill%20Bill%20(Soundtrack)%20(Vol.2)%20-%2008%20-%20The%20Legend%20Of%20Pai%20Mei%20-%20David%20Carradine%20and%20Uma%20Thurman.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4824</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#DavidCarradineandUmaThurman"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TheLegendOfPaiMei</j.0:hasName>
     <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#playDateAdded">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#AC/DC">
-    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AC/DC</j.0:hasName>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#P!nk">
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P!nk</j.0:hasName>
     <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Joe">
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#TheFourHorsemen">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">432822</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Metallica%20-%20Discography%201983-2008%20(19%20Albums,%2023%20CDs)/Metallica%20-%201983%20-%20Kill%20'em%20All/02%20-%20The%20Four%20Horsemen.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2424</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Metallica"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TheFourHorsemen</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Beyoncé">
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beyoncé</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#TheFrayedEndsOfSanity">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">464169</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Metallica%20-%20Discography%201983-2008%20(19%20Albums,%2023%20CDs)/Metallica%20-%201988%20-%20And%20Justice%20For%20All/07%20-%20The%20Frayed%20Ends%20Of%20Sanity.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2536</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Metallica"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TheFrayedEndsOfSanity</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Halo">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">224188</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Downloaded%20by%20MediaHuman/Beyonce%CC%81%20-%20Halo.m4a</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">5790</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Beyoncé"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Halo</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#OdetoMyFamily">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">270524</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/The%20Cranberries%20-%20Discography/The%20Cranberries%20-%20Gold/The%20Cranberries%20-%20Ode%20to%20My%20Family%20-%2009%20-%20Gold%20-%202008.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">3992</j.0:hasID>
     <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#TheCranberries"/>
-    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joe</j.0:hasName>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OdetoMyFamily</j.0:hasName>
     <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#playCount">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#IronMaiden">
@@ -169,26 +392,55 @@
     <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metallica</j.0:hasName>
     <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#GreenHornet">
-    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#AlHirt"/>
-    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GreenHornet</j.0:hasName>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#InTrance">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">287451</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Scorpions/1975%20In%20Trance/02%20-%20Scorpions%20-%20In%20Trance%20-%20In%20Trance.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">3620</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Scorpions"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InTrance</j.0:hasName>
     <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#CreepingDeath">
-    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Metallica"/>
-    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CreepingDeath</j.0:hasName>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#MISSMistreated">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">272117</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Rainbow/08%20-%20Straight%20Between%20The%20Eyes%20(1982)/07%20-%20MISS%20Mistreated.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">3492</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Rainbow"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MISSMistreated</j.0:hasName>
     <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#OfMoons,Birds&amp;Monsters">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">286772</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/MGMT%20Torrent/08-mgmt-of_moons_birds_and_monsters.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">6124</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#MGMT"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OfMoons,Birds&amp;Monsters</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#dateAdded">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#WithinTemptation">
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WithinTemptation</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Genre">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#BadBoyBoogie">
-    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#AC/DC"/>
-    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BadBoyBoogie</j.0:hasName>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#SaveMe">
+    <j.0:hasTotalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#long">228205</j.0:hasTotalTime>
+    <j.0:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file://localhost/Users/tdgunes/Music/Queen%20-%20The%20Ultimate%20Best%20Of%20Queen%20(2011)%20%5Bmp3%5D%5Bwww.lokotorrents.com%5D/18.%20Save%20Me.mp3</j.0:hasLocation>
+    <j.0:hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">3350</j.0:hasID>
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Queen"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SaveMe</j.0:hasName>
     <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#DavidCarradineandUmaThurman">
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DavidCarradineandUmaThurman</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Epica">
     <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Epica</j.0:hasName>
