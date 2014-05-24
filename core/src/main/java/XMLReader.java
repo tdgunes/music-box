@@ -5,7 +5,6 @@ import com.dd.plist.PropertyListParser;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.stream.XMLStreamException;
 import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
@@ -65,56 +64,26 @@ public class XMLReader {
     public XMLReader() throws ParserConfigurationException, ParseException, SAXException, PropertyListFormatException, IOException {
         File file = new File(xmlFilePath);
         NSDictionary rootDict = (NSDictionary) PropertyListParser.parse(file);
-//        for (String s : rootDict.keySet()) {
-//            System.out.print(s + ": ");
-//            System.out.println(rootDict.get(s));
-//        }
         trackList = new ArrayList<HashMap>();
 
-
-
         NSDictionary tracks = (NSDictionary) rootDict.get("Tracks");
-        int limit = 0;
 
 
         for (String s : tracks.keySet()) {
-//            System.out.print(" ");
-//            System.out.print(s + ": "); // id of the track
-//            System.out.println(tracks.get(s));
 
-//
-//            Random r = new Random();
-//            if (r.nextInt(100) == 5) {
+            NSDictionary trackInfo = (NSDictionary) tracks.get(s);
+            HashMap<String, NSObject> hashMap = new HashMap<String, NSObject>();
+            for (String info : trackInfo.keySet()) {
+                hashMap.put(info, trackInfo.get(info));
 
+            }
+            trackList.add(hashMap);
 
-                NSDictionary trackInfo = (NSDictionary) tracks.get(s);
-                HashMap<String, NSObject> hashMap = new HashMap<String, NSObject>();
-                for (String info : trackInfo.keySet()) {
-                    hashMap.put(info, trackInfo.get(info));
-                    // System.out.print("  ");
-                    // System.out.print(info + ": ");
-                    //System.out.println(trackInfo.get(info));
-
-                }
-                trackList.add(hashMap);
-//
-//
-//                if (limit == 100) break;
-//
-//
-//                limit++;
-//            }
         }
-
-    }
-    public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException, XMLStreamException, PropertyListFormatException, ParseException {
-        XMLReader xmlReader = new XMLReader();
 
     }
 
     public ArrayList<HashMap> getTrackList() {
-
-
         return trackList;
 
     }

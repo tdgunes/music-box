@@ -46,8 +46,6 @@ public class QueryEngine {
         for (String queryToken : queryTokens) {
             //validate
 
-            if(queryToken.charAt(0) == '#'){
-                queryToken = queryToken.substring(1); //#Metallica to Metallica
 
                 String queryString = "" +
                         "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
@@ -116,11 +114,8 @@ public class QueryEngine {
                 }
 
             }
-            else{
-                System.out.println(queryToken + " is not a valid token!");
 
-            }
-        }
+
 
 
 

@@ -177,6 +177,7 @@ public class MusicOntology {
                 String rawTrackID = hashMap.get("Track ID").toString();
                 String rawLocation = hashMap.get("Location").toString();
                 String rawTotalTime = hashMap.get("Total Time").toString();
+                String rawGenre = hashMap.get("Genre").toString();
                 String rawAlbum = Utils.cleanStringForOnto(hashMap.get("Album").toString());
 
                 System.out.println("Track: " + rawTrack);
@@ -184,12 +185,14 @@ public class MusicOntology {
                 System.out.println("Track ID: " + rawTrackID);
                 System.out.println("Location: " + rawLocation);
                 System.out.println("Total time: "+ rawTotalTime);
+                System.out.println("Genre: "+ rawGenre);
                 System.out.println();
 
                 //preparing trackIndividual
                 Individual trackIndividual = track.createIndividual(ns + rawTrack);
                 Individual artistIndividual = artist.createIndividual(ns + rawArtist);
                 Individual albumIndividual = album.createIndividual(ns + rawAlbum);
+                Individual genreIndividual = genre.createIndividual(ns + rawGenre);
 
 
                 //trackIndividual :hasName "songName"
@@ -209,6 +212,9 @@ public class MusicOntology {
 
                 //trackIndividual :onAlbum albumIndividual
                 ontModel.add(ontModel.createStatement(trackIndividual, onAlbum, albumIndividual));
+
+                //trackIndividiual :hasGenre genreIndividual
+                ontModel.add(ontModel.createStatement(trackIndividual, hasGenre, genreIndividual));
 
                 //trackIndividual :hasID "Track ID"
                 Literal trackID = ontModel.createTypedLiteral(rawTrackID, XSDDatatype.XSDpositiveInteger);

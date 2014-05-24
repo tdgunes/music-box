@@ -5,8 +5,11 @@ import org.xml.sax.SAXException;
 
 import javax.swing.*;
 import javax.xml.parsers.ParserConfigurationException;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.text.ParseException;
+import java.util.LinkedHashSet;
 
 /**
  * Taha Dogan Gunes
@@ -38,10 +41,14 @@ public class MusicBoxView extends JFrame {
     private JPanel contentPane;
     private JList list1;
     private JList list2;
+    private JList list3;
+    private JButton aboutButton;
+    private JComboBox comboBox3;
 
 
     public DefaultListModel<String> onAlbumModel;
     public DefaultListModel<String> playedByModel;
+    public DefaultListModel<String> hasGenreModel;
 
 
 
@@ -49,24 +56,62 @@ public class MusicBoxView extends JFrame {
 
         MusicOntology ontology = new MusicOntology();
 
+        LinkedHashSet<String> hashSet = new LinkedHashSet<String>();
+
         ExtendedIterator<Individual> artistIterator = (ExtendedIterator<Individual>) ontology.artist.listInstances();
 
         while (artistIterator.hasNext()){
             Individual ind = artistIterator.next();
-            playedByModel.addElement(ind.getLocalName());
+            if (hashSet.add(ind.getLocalName().trim()))
+                playedByModel.addElement(ind.getLocalName());
             System.out.println(ind.getLocalName());
         }
 
-
+        hashSet = new LinkedHashSet<String>();
         ExtendedIterator<Individual> albumIterator = (ExtendedIterator<Individual>) ontology.album.listInstances();
 
 
         while (albumIterator.hasNext()){
             Individual ind = albumIterator.next();
-            onAlbumModel.addElement(ind.getLocalName());
+            if (hashSet.add(ind.getLocalName().trim()))
+                onAlbumModel.addElement(ind.getLocalName());
             System.out.println(ind.getLocalName());
         }
 
+        hashSet = new LinkedHashSet<String>();
+        ExtendedIterator<Individual> genreIterator = (ExtendedIterator<Individual>) ontology.genre.listInstances();
+
+
+        while (genreIterator.hasNext()){
+
+            Individual ind = genreIterator.next();
+            if (hashSet.add(ind.getLocalName().trim()))
+                hasGenreModel.addElement(ind.getLocalName());
+            System.out.println(ind.getLocalName());
+        }
+
+
+        generateButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                System.out.println();
+                //artist playedBy
+                for (Object o : list1.getSelectedValuesList()) {
+                    System.out.println(o);
+                }
+
+                //album
+                for (Object o : list2.getSelectedValuesList()) {
+                    System.out.println(o);
+                }
+
+                //genre
+                for (Object o : list3.getSelectedValuesList()) {
+                    System.out.println(o);
+                }
+            }
+        });
 
 
     }
@@ -84,9 +129,11 @@ public class MusicBoxView extends JFrame {
 
         onAlbumModel = new DefaultListModel<String>();
         playedByModel = new DefaultListModel<String>();
+        hasGenreModel = new DefaultListModel<String>();
 
         list2 = new JList<String>(onAlbumModel);
         list1 = new JList<String>(playedByModel);
+        list3 = new JList<String>(hasGenreModel);
 
     }
 }
