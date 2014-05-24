@@ -1019,8 +1019,8 @@ digraph {
 	"Rhttp://www.github.com/tdgunes/music-box/#Brighter than A Thousand Suns" -> "Rowl:Class" [ label="rdf:type" ];
 	"Rhttp://www.github.com/tdgunes/music-box/#Dark Paradise Demo 1" -> "Rrdf:nil" [ label="owl:intersectionOf" ];
 	"Rhttp://www.github.com/tdgunes/music-box/#Dark Paradise Demo 1" -> "Rowl:Class" [ label="rdf:type" ];
-	"Rhttp://www.github.com/tdgunes/music-box/#Another Me "In Lack'ech"" -> "Rrdf:nil" [ label="owl:intersectionOf" ];
-	"Rhttp://www.github.com/tdgunes/music-box/#Another Me "In Lack'ech"" -> "Rowl:Class" [ label="rdf:type" ];
+	"Rhttp://www.github.com/tdgunes/music-box/#Another Me "In Lack'ech" -> "Rrdf:nil" [ label="owl:intersectionOf" ];
+	"Rhttp://www.github.com/tdgunes/music-box/#Another Me "In Lack'ech" -> "Rowl:Class" [ label="rdf:type" ];
 	"Rhttp://www.github.com/tdgunes/music-box/#Hero Of The Day" -> "Rrdf:nil" [ label="owl:intersectionOf" ];
 	"Rhttp://www.github.com/tdgunes/music-box/#Hero Of The Day" -> "Rowl:Class" [ label="rdf:type" ];
 	"Rhttp://www.github.com/tdgunes/music-box/#13 - Anatolia" -> "Rrdf:nil" [ label="owl:intersectionOf" ];

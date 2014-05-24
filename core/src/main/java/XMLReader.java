@@ -1,5 +1,3 @@
-package examples;
-
 import com.dd.plist.NSDictionary;
 import com.dd.plist.NSObject;
 import com.dd.plist.PropertyListFormatException;
@@ -60,56 +58,65 @@ import java.util.Random;
 //         File Folder Count    3
 //         Library Folder Count    2
 
-public class XMLExample {
+public class XMLReader {
     public static final String xmlFilePath = "/Users/tdgunes/Music/iTunes/iTunes Music Library.xml";
     private static Throwable ex;
     private ArrayList<HashMap> trackList;
 
-    public XMLExample() throws ParserConfigurationException, ParseException, SAXException, PropertyListFormatException, IOException {
+    public XMLReader() throws ParserConfigurationException, ParseException, SAXException, PropertyListFormatException, IOException {
         File file = new File(xmlFilePath);
         NSDictionary rootDict = (NSDictionary) PropertyListParser.parse(file);
-        for (String s : rootDict.keySet()) {
+//        for (String s : rootDict.keySet()) {
 //            System.out.print(s + ": ");
 //            System.out.println(rootDict.get(s));
-        }
+//        }
         trackList = new ArrayList<HashMap>();
+
+
 
         NSDictionary tracks = (NSDictionary) rootDict.get("Tracks");
         int limit = 0;
-        Random r = new Random();
+
+
         for (String s : tracks.keySet()) {
 //            System.out.print(" ");
 //            System.out.print(s + ": "); // id of the track
 //            System.out.println(tracks.get(s));
+
+
+            Random r = new Random();
             if (r.nextInt(100) == 5) {
+
+
                 NSDictionary trackInfo = (NSDictionary) tracks.get(s);
-                HashMap<String,NSObject> hashMap = new HashMap<String,NSObject>();
+                HashMap<String, NSObject> hashMap = new HashMap<String, NSObject>();
                 for (String info : trackInfo.keySet()) {
-                    hashMap.put(info,trackInfo.get(info));
+                    hashMap.put(info, trackInfo.get(info));
                     // System.out.print("  ");
                     // System.out.print(info + ": ");
                     //System.out.println(trackInfo.get(info));
 
                 }
                 trackList.add(hashMap);
+
+
+                if (limit == 100) break;
+
+
+                limit++;
             }
-
-//            if (limit==100) break;
-
-//            limit++;
         }
 
     }
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException, XMLStreamException, PropertyListFormatException, ParseException {
-        //File xmlFile = new File(xmlFilePath);
-
-        XMLExample xmlExample = new XMLExample();
-
-
+        XMLReader xmlReader = new XMLReader();
 
     }
 
     public ArrayList<HashMap> getTrackList() {
+
+
         return trackList;
+
     }
 }

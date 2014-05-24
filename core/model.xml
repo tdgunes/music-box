@@ -4,575 +4,194 @@
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Summertime Sadness">
-    <owl:intersectionOf rdf:nodeID="A0"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#St. Anger">
-    <owl:intersectionOf rdf:nodeID="A1"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#I Will Always">
-    <owl:intersectionOf rdf:nodeID="A2"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#playedBy:Imagine Dragons">
-    <owl:someValuesFrom rdf:resource="http://www.github.com/tdgunes/music-bot/#Imagine Dragons"/>
-    <owl:onProperty rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasGenre:Hard Rock">
-    <owl:someValuesFrom rdf:resource="http://www.github.com/tdgunes/music-bot/#Hard Rock"/>
-    <owl:onProperty rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Hard Rock">
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Genre"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A3">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:Rock"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#playDateUTC">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#playedBy:AC/DC">
-    <owl:someValuesFrom rdf:resource="http://www.github.com/tdgunes/music-bot/#AC/DC"/>
-    <owl:onProperty rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A4">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:AC/DC"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A5">
-    <rdf:rest rdf:nodeID="A6"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:Nightwish"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Symphony Of Destruction (Demo)">
-    <owl:intersectionOf rdf:nodeID="A7"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Alternative">
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Genre"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A8">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:Metal"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A9">
-    <rdf:rest rdf:nodeID="A10"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:Iron Maiden"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A11">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:Alternative"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Sabbra Cadabra">
-    <owl:intersectionOf rdf:nodeID="A12"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#My Last Words">
-    <owl:intersectionOf rdf:nodeID="A13"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Rainbow">
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Scorpions">
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scorpions</j.0:hasName>
     <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasGenre:Thrash Metal">
-    <owl:someValuesFrom rdf:resource="http://www.github.com/tdgunes/music-bot/#Thrash Metal"/>
-    <owl:onProperty rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Rock">
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Genre"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Artist">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A14">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:Thrash Metal"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A15">
-    <rdf:rest rdf:nodeID="A3"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:Scorpions"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Every Night">
-    <owl:intersectionOf rdf:nodeID="A16"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#playDateAdded">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A6">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:Symphonic Metal"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A17">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:AC/DC"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#R&amp;B/Soul">
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Genre"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#iTunes U">
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Genre"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Radioactive">
-    <owl:intersectionOf rdf:nodeID="A18"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A10">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:Heavy Metal"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A19">
-    <rdf:rest rdf:nodeID="A8"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:Iron Maiden"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#MISS Mistreated">
-    <owl:intersectionOf rdf:nodeID="A20"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#The Doctor Is Calling">
-    <owl:intersectionOf rdf:nodeID="A21"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasGenre:Heavy Metal">
-    <owl:someValuesFrom rdf:resource="http://www.github.com/tdgunes/music-bot/#Heavy Metal"/>
-    <owl:onProperty rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A22">
-    <rdf:rest rdf:nodeID="A11"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:The Cranberries"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A18">
-    <rdf:rest rdf:nodeID="A23"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:Imagine Dragons"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Within Temptation">
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#AlHirt">
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AlHirt</j.0:hasName>
     <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A24">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:AC/DC"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Anything Goes">
-    <owl:intersectionOf rdf:nodeID="A24"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Little Lover">
-    <owl:intersectionOf rdf:nodeID="A17"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Heatseeker">
-    <owl:intersectionOf rdf:nodeID="A4"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Nightwish">
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Die, Die My Darling">
-    <owl:intersectionOf rdf:nodeID="A25"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <rdf:rest rdf:nodeID="A26"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:Metallica"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A27">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:Hard Rock"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#playedBy:Iron Maiden">
-    <owl:someValuesFrom rdf:resource="http://www.github.com/tdgunes/music-bot/#Iron Maiden"/>
-    <owl:onProperty rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A7">
-    <rdf:rest rdf:nodeID="A28"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:Megadeth"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A29">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:Alternative"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#playedBy:Metallica">
-    <owl:someValuesFrom rdf:resource="http://www.github.com/tdgunes/music-bot/#Metallica"/>
-    <owl:onProperty rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A30">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:Indie"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasTotalTime">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#playedBy:Nightwish">
-    <owl:someValuesFrom rdf:resource="http://www.github.com/tdgunes/music-bot/#Nightwish"/>
-    <owl:onProperty rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Beyoncé">
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasGenre:Indie">
-    <owl:someValuesFrom rdf:resource="http://www.github.com/tdgunes/music-bot/#Indie"/>
-    <owl:onProperty rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#playedBy:The Cranberries">
-    <owl:someValuesFrom rdf:resource="http://www.github.com/tdgunes/music-bot/#The Cranberries"/>
-    <owl:onProperty rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A2">
-    <rdf:rest rdf:nodeID="A29"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:The Cranberries"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Jump">
-    <owl:intersectionOf rdf:nodeID="A31"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Metallica">
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A26">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:Hard Rock"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A32">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:AC/DC"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#playedBy:Lana Del Rey">
-    <owl:someValuesFrom rdf:resource="http://www.github.com/tdgunes/music-bot/#Lana Del Rey"/>
-    <owl:onProperty rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A12">
-    <rdf:rest rdf:nodeID="A27"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:Metallica"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A28">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:Thrash Metal"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Scorpions">
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Video Phone">
-    <owl:intersectionOf rdf:nodeID="A33"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Coming home">
-    <owl:intersectionOf rdf:nodeID="A15"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Thrash Metal">
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Genre"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Megadeth">
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Megadeth</j.0:hasName>
     <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A34">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:Hard Rock"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A35">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:Indie"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#playedBy:Megadeth">
-    <owl:someValuesFrom rdf:resource="http://www.github.com/tdgunes/music-bot/#Megadeth"/>
-    <owl:onProperty rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasGenre:iTunes U">
-    <owl:someValuesFrom rdf:resource="http://www.github.com/tdgunes/music-bot/#iTunes U"/>
-    <owl:onProperty rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A0">
-    <rdf:rest rdf:nodeID="A36"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:Lana Del Rey"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasGenre">
-    <rdfs:range rdf:resource="http://www.github.com/tdgunes/music-bot/#Genre"/>
-    <rdfs:domain rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#The Cranberries">
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#releasedYear">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasGenre:Metal">
-    <owl:someValuesFrom rdf:resource="http://www.github.com/tdgunes/music-bot/#Metal"/>
-    <owl:onProperty rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A37">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:Hard Rock"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasID">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A13">
-    <rdf:rest rdf:nodeID="A38"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:Megadeth"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A39">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:R&amp;B/Soul"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#I&apos;m Indebited To You">
-    <owl:intersectionOf rdf:nodeID="A40"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Imagine Dragons">
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Iron Maiden">
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#The Clairvoyant">
-    <owl:intersectionOf rdf:nodeID="A19"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#playedBy:Within Temptation">
-    <owl:someValuesFrom rdf:resource="http://www.github.com/tdgunes/music-bot/#Within Temptation"/>
-    <owl:onProperty rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A41">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:Dream Pop"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A42">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:Rock"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#The Poet And The Pendulum (Demo Version)">
-    <owl:intersectionOf rdf:nodeID="A5"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A43">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:Symphonic Metal"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#AC/DC">
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A38">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:Thrash Metal"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A44">
-    <rdf:rest rdf:nodeID="A37"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:Metallica"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Recipe For Hate...Warhorse">
-    <owl:intersectionOf rdf:nodeID="A45"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A25">
-    <rdf:rest rdf:nodeID="A34"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:Metallica"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Symphonic Metal">
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Genre"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#playedBy:Beyoncé">
-    <owl:someValuesFrom rdf:resource="http://www.github.com/tdgunes/music-bot/#Beyoncé"/>
-    <owl:onProperty rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A16">
-    <rdf:rest rdf:nodeID="A30"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:Imagine Dragons"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Amsterdam (iTunes Session)">
-    <owl:intersectionOf rdf:nodeID="A46"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A23">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:Indie"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A47">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:Hard Rock"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Come And Get It">
-    <owl:intersectionOf rdf:nodeID="A32"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A31">
-    <rdf:rest rdf:nodeID="A48"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:Lana Del Rey"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Blitzkrieg">
-    <owl:intersectionOf rdf:nodeID="A49"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasBitRate">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasGenre:Rock">
-    <owl:someValuesFrom rdf:resource="http://www.github.com/tdgunes/music-bot/#Rock"/>
-    <owl:onProperty rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#MediaOverkill">
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Scorpions"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MediaOverkill</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A40">
-    <rdf:rest rdf:nodeID="A41"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:Lana Del Rey"/>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#ForeclosureOfADream">
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Megadeth"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ForeclosureOfADream</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A50">
-    <rdf:rest rdf:nodeID="A42"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:Within Temptation"/>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#SetTheWorldAfire(PaulLaniMix)">
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Megadeth"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SetTheWorldAfire(PaulLaniMix)</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#SomeSinForNuthin">
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#AC/DC"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SomeSinForNuthin</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Queen">
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Queen</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#playedBy">
     <rdfs:range rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
     <rdfs:domain rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#11 Bittersweet">
-    <owl:intersectionOf rdf:nodeID="A50"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#playDateUTC">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A51">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:Thrash Metal"/>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#InvisibleKid">
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Metallica"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InvisibleKid</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A20">
-    <rdf:rest rdf:nodeID="A52"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:Rainbow"/>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#FriendsWillBeFriends">
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Queen"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FriendsWillBeFriends</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#The Crow and the Warrior (by Darkwoods My Betrothed)">
-    <owl:intersectionOf rdf:nodeID="A53"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasGenre">
+    <rdfs:range rdf:resource="http://www.github.com/tdgunes/music-bot/#Genre"/>
+    <rdfs:domain rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A48">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:Dream Pop"/>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Diadems">
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Megadeth"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diadems</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Nightwish">
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nightwish</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#ShesGotBalls">
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#AC/DC"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ShesGotBalls</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Adagio">
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Epica"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adagio</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#DesperateAndy">
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#TheCranberries"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DesperateAndy</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#releasedYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasID">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#CantStandStill">
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#AC/DC"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CantStandStill</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#TheCranberries">
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TheCranberries</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Track">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A21">
-    <rdf:rest rdf:nodeID="A14"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:Megadeth"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A53">
-    <rdf:rest rdf:nodeID="A43"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:Nightwish"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A46">
-    <rdf:rest rdf:nodeID="A35"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:Imagine Dragons"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#playedBy:Scorpions">
-    <owl:someValuesFrom rdf:resource="http://www.github.com/tdgunes/music-bot/#Scorpions"/>
-    <owl:onProperty rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A49">
-    <rdf:rest rdf:nodeID="A47"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:Metallica"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#playedBy:Rainbow">
-    <owl:someValuesFrom rdf:resource="http://www.github.com/tdgunes/music-bot/#Rainbow"/>
-    <owl:onProperty rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Lana Del Rey">
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#You and Me">
-    <owl:intersectionOf rdf:nodeID="A22"/>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Album">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasGenre:Dream Pop">
-    <owl:someValuesFrom rdf:resource="http://www.github.com/tdgunes/music-bot/#Dream Pop"/>
-    <owl:onProperty rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#onAlbum">
+    <rdfs:range rdf:resource="http://www.github.com/tdgunes/music-bot/#Album"/>
+    <rdfs:domain rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A36">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:Dream Pop"/>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Ballbreaker(live)">
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#AC/DC"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ballbreaker(live)</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Metal">
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Genre"/>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Stargazers">
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Nightwish"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stargazers</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A54">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:iTunes U"/>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasTotalTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasGenre:Alternative">
-    <owl:someValuesFrom rdf:resource="http://www.github.com/tdgunes/music-bot/#Alternative"/>
-    <owl:onProperty rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#GhostoftheNavigator">
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#IronMaiden"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GhostoftheNavigator</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Artist">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#TheJack">
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#AC/DC"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TheJack</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#playDateAdded">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#AC/DC">
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AC/DC</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Joe">
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#TheCranberries"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joe</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#playCount">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Indie">
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Genre"/>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#IronMaiden">
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IronMaiden</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Heavy Metal">
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Genre"/>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Metallica">
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metallica</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A52">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre:Rock"/>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#GreenHornet">
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#AlHirt"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GreenHornet</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Futureal">
-    <owl:intersectionOf rdf:nodeID="A9"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasGenre:Symphonic Metal">
-    <owl:someValuesFrom rdf:resource="http://www.github.com/tdgunes/music-bot/#Symphonic Metal"/>
-    <owl:onProperty rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A45">
-    <rdf:rest rdf:nodeID="A51"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:Megadeth"/>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#CreepingDeath">
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#Metallica"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CreepingDeath</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Genre">
-    <rdfs:subClassOf rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A33">
-    <rdf:rest rdf:nodeID="A39"/>
-    <rdf:first rdf:resource="http://www.github.com/tdgunes/music-bot/#playedBy:Beyoncé"/>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#BadBoyBoogie">
+    <j.0:playedBy rdf:resource="http://www.github.com/tdgunes/music-bot/#AC/DC"/>
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BadBoyBoogie</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Track"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Problem Set 3 Solutions">
-    <owl:intersectionOf rdf:nodeID="A54"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#hasGenre:R&amp;B/Soul">
-    <owl:someValuesFrom rdf:resource="http://www.github.com/tdgunes/music-bot/#R&amp;B/Soul"/>
-    <owl:onProperty rdf:resource="http://www.github.com/tdgunes/music-bot/#hasGenre"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Dream Pop">
-    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Genre"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Seek &amp; Destroy">
-    <owl:intersectionOf rdf:nodeID="A44"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  <rdf:Description rdf:about="http://www.github.com/tdgunes/music-bot/#Epica">
+    <j.0:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Epica</j.0:hasName>
+    <rdf:type rdf:resource="http://www.github.com/tdgunes/music-bot/#Artist"/>
   </rdf:Description>
 </rdf:RDF>

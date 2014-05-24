@@ -1,10 +1,10 @@
 import com.dd.plist.PropertyListFormatException;
+import com.hp.hpl.jena.datatypes.xsd.XSDDatatype;
 import com.hp.hpl.jena.ontology.*;
+import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
-import com.hp.hpl.jena.rdf.model.RDFList;
-import com.hp.hpl.jena.rdf.model.RDFNode;
-import com.hp.hpl.jena.reasoner.Reasoner;
-import examples.XMLExample;
+import com.hp.hpl.jena.rdf.model.Statement;
+import com.hp.hpl.jena.vocabulary.XSD;
 import org.mindswap.pellet.jena.PelletReasonerFactory;
 import org.xml.sax.SAXException;
 
@@ -82,139 +82,115 @@ public class MusicOntology {
     public OntClass genre;
     public ObjectProperty hasGenre;
 
-
+    public OntClass album;
+    public ObjectProperty onAlbum;
 
     public OntClass artist;
     //TODO expand artist class from dbpedia
 
     public ObjectProperty playedBy;
 
-    public HashMap<String, Individual> allIndividuals;
 
-    public MusicOntology() {
+    public MusicOntology() throws PropertyListFormatException, ParserConfigurationException, SAXException, ParseException, IOException {
+
         ns = baseURI + "#";
 
-        Reasoner reasoner = PelletReasonerFactory.theInstance().create();
-        OntModelSpec ontModelSpec = OntModelSpec.OWL_DL_MEM;
+        //    Reasoner reasoner = PelletReasonerFactory.theInstance().create();
+//        OntModelSpec ontModelSpec = OntModelSpec.OWL_LITE_MEM;
 
-        ontModelSpec.setReasoner(reasoner);
-        ontModel = ModelFactory.createOntologyModel(ontModelSpec);
+//        ontModelSpec.setReasoner(reasoner);
+        ontModel = ModelFactory.createOntologyModel(PelletReasonerFactory.THE_SPEC);
 
         onto = ontModel.createOntology(baseURI);
 
-        track = ontModel.createClass(ns+"Track");
-        genre = ontModel.createClass(ns+"Genre");
-        artist = ontModel.createClass(ns+"Artist");
+        track = ontModel.createClass(ns + "Track");
+        genre = ontModel.createClass(ns + "Genre");
+        artist = ontModel.createClass(ns + "Artist");
+        album = ontModel.createClass(ns + "Album");
 
-        track.addSubClass(genre);
 
-        hasGenre = ontModel.createObjectProperty(ns+"hasGenre");
+        onAlbum = ontModel.createObjectProperty(ns + "onAlbum");
+        onAlbum.addDomain(track);
+        onAlbum.addRange(album);
+
+
+        hasGenre = ontModel.createObjectProperty(ns + "hasGenre");
         hasGenre.addDomain(track);
         hasGenre.addRange(genre);
 
-        playedBy = ontModel.createObjectProperty(ns+"playedBy");
+
+        playedBy = ontModel.createObjectProperty(ns + "playedBy");
         playedBy.addDomain(track);
         playedBy.addRange(artist);
 
 
         hasID = ontModel.createDatatypeProperty(ns + "hasID");
-        hasName = ontModel.createDatatypeProperty(ns+"hasName");
-        releasedYear = ontModel.createDatatypeProperty(ns+"releasedYear");
-        hasTotalTime = ontModel.createDatatypeProperty(ns+"hasTotalTime");
-        hasBitRate = ontModel.createDatatypeProperty(ns+"hasBitRate");
-        playCount = ontModel.createDatatypeProperty(ns+"playCount");
-        playDateUTC = ontModel.createDatatypeProperty(ns+"playDateUTC");
-        playDateAdded = ontModel.createDatatypeProperty(ns+"playDateAdded");
 
-        allIndividuals = new HashMap<String, Individual>();
+        hasName = ontModel.createDatatypeProperty(ns + "hasName");
+        hasName.addRange(XSD.xstring);
+
+        releasedYear = ontModel.createDatatypeProperty(ns + "releasedYear");
+        hasTotalTime = ontModel.createDatatypeProperty(ns + "hasTotalTime");
+        hasBitRate = ontModel.createDatatypeProperty(ns + "hasBitRate");
+        playCount = ontModel.createDatatypeProperty(ns + "playCount");
+        playDateUTC = ontModel.createDatatypeProperty(ns + "playDateUTC");
+        playDateAdded = ontModel.createDatatypeProperty(ns + "playDateAdded");
+
+
+        addLibraryToOntology();
     }
+
     public void writeToFile() throws IOException, PropertyListFormatException, ParserConfigurationException, SAXException, ParseException {
-        FileWriter out = new FileWriter( "model.xml" );
-        XMLExample xmlExample = new XMLExample();
-        ArrayList<HashMap> tracks = xmlExample.getTrackList();
-        int count = 0;
-        for (HashMap hashMap : tracks) {
-            //Genre creation
-            ArrayList<RDFNode> classes = new ArrayList<RDFNode>();
-
-
-
-            String songName = ns+Utils.cleanStringForOnto(hashMap.get("Name").toString());
-            System.out.println("Adding: "+ songName);
-            //String albumName = ns+Utils.cleanStringForOnto(hashMap.get("Album").toString());
-
-            Object artistObject = hashMap.get("Artist");
-            if (artistObject != null){
-                String artist = Utils.cleanStringForOnto(artistObject.toString());
-                System.out.println(" -+ Played by "+artist);
-                addArtistRestriction(classes, artist);
-            }
-            else {
-                System.out.println(" -> No artist!");
-            }
-
-
-            Object genreObject = hashMap.get("Genre");
-            if (genreObject != null){
-                String genre = Utils.cleanStringForOnto(genreObject.toString());
-                System.out.println(" -+ Has Genre "+genre);
-                addGenreRestriction(genre, classes);
-
-            }
-            else {
-                System.out.println(" -> No genre!");
-            }
-
-
-            RDFNode[] array = new RDFNode[classes.size()];
-            int x = 0;
-            for (RDFNode aClass : classes) {
-                array[x++]= aClass;
-            }
-            RDFList list = ontModel.createList(array);
-            ontModel.createIntersectionClass(songName,list);
-
-            count++;
-            System.out.println();
-        }
-        System.out.println("Count of songs in ontology: "+ count);
+        FileWriter out = new FileWriter("model.xml");
         ontModel.write(out);
-
         System.out.println("Done");
     }
 
-    private void addArtistRestriction(ArrayList<RDFNode> classes,String artist) {
-        addArtistIndividual(artist);
-        SomeValuesFromRestriction restriction = ontModel.createSomeValuesFromRestriction(ns+"playedBy:"+artist,
-                playedBy,allIndividuals.get(artist));
-        classes.add(restriction);
+    private void addLibraryToOntology() throws ParserConfigurationException, ParseException, SAXException, PropertyListFormatException, IOException {
+        XMLReader xmlReader = new XMLReader();
+        ArrayList<HashMap> tracks = xmlReader.getTrackList();
+
+
+        for (HashMap hashMap : tracks) {
+            try {
+                String rawTrack = Utils.cleanStringForOnto(hashMap.get("Name").toString());
+                String rawArtist = Utils.cleanStringForOnto(hashMap.get("Artist").toString());
+
+                System.out.println("Track: " + rawTrack);
+                System.out.println("Artist: " + rawArtist);
+
+                //preparing trackIndividual
+                Individual trackIndividual = track.createIndividual(ns + rawTrack);
+                Individual artistIndividual = artist.createIndividual(ns + rawArtist);
+
+                //trackIndividual :hasName "songName"
+                Literal trackName = ontModel.createTypedLiteral(rawTrack, XSDDatatype.XSDstring);
+                Statement trackHasName = ontModel.createStatement(trackIndividual, hasName, trackName);
+                ontModel.add(trackHasName);
+
+                //artistIndividual :hasName "artistName"
+                Literal artistName = ontModel.createTypedLiteral(rawArtist, XSDDatatype.XSDstring);
+                Statement artistHasName = ontModel.createStatement(artistIndividual, hasName, artistName);
+                ontModel.add(artistHasName);
+
+
+                //trackIndividual :playedBy artistIndividual
+                ontModel.add(ontModel.createStatement(trackIndividual, playedBy, artistIndividual));
+            } catch (NullPointerException exception) {
+                continue;
+            }
+        }
+        System.out.println("Total tracks: " + tracks.size());
     }
 
-    private void addGenreRestriction(String genre, ArrayList<RDFNode> classes) {
-        addGenreIndividual(genre);
-        SomeValuesFromRestriction restriction = ontModel.createSomeValuesFromRestriction(ns+"hasGenre:"+genre,
-                hasGenre,allIndividuals.get(genre));
 
-        classes.add(restriction);
-    }
-
-    private void addGenreIndividual(String genre){
-        Individual individualGenre = this.genre.createIndividual(ns+genre);
-        if (!allIndividuals.containsKey(genre))
-            allIndividuals.put(genre, individualGenre);
-    }
-
-    private void addArtistIndividual(String artist){
-        Individual indivualArtist = this.artist.createIndividual(ns+artist);
-        if (!allIndividuals.containsKey(artist))
-            allIndividuals.put(artist, indivualArtist);
-    }
 
 
     public static void main(String[] args) throws IOException, ParserConfigurationException, ParseException, SAXException, PropertyListFormatException {
-        MusicOntology jobOntology = new MusicOntology();
+        MusicOntology musicOntology = new MusicOntology();
 
-        jobOntology.writeToFile();
+        musicOntology.writeToFile();
+
 
     }
 }

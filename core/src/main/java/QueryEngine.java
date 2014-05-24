@@ -1,0 +1,115 @@
+import com.clarkparsia.pellet.sparqldl.jena.SparqlDLExecutionFactory;
+import com.hp.hpl.jena.query.*;
+
+import com.hp.hpl.jena.rdf.model.Literal;
+import com.hp.hpl.jena.rdf.model.RDFNode;
+import com.hp.hpl.jena.rdf.model.impl.StatementImpl;
+import com.hp.hpl.jena.util.iterator.ExtendedIterator;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+/**
+ * Taha Dogan Gunes
+ * <tdgunes@gmail.com>
+ * <p/>
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+ * associated documentation files (the "Software"), to deal in the Software without restriction, including
+ * without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the
+ * following conditions:
+ * <p/>
+ * The above copyright notice and this permission notice shall be included in all copies or substantial
+ * portions of the Software.
+ * <p/>
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+ * LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+ * EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR
+ * THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+public class QueryEngine {
+    private String playlistName;
+    private String query;
+    private MusicOntology musicOntology;
+
+    public QueryEngine(String query, MusicOntology musicOntology, String playlistName) {
+        this.query = query;
+        this.musicOntology = musicOntology;
+        this.playlistName = playlistName;
+    }
+
+    public HashMap<String, ArrayList<String>> getResults(){
+        HashMap<String, ArrayList<String>> results = new HashMap<String, ArrayList<String>>();
+        String[] queryTokens = query.split("\\s+");
+
+
+        System.out.println("------------------");
+        for (String queryToken : queryTokens) {
+            //validate
+
+            if(queryToken.charAt(0) == '#'){
+                queryToken = queryToken.substring(1); //#Metallica to Metallica
+
+                String queryString = "" +
+                        "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+                        "PREFIX : <" + musicOntology.ns + ">\n" +
+                        "SELECT DISTINCT ?track WHERE {" +
+                        "?track rdf:type :Track.\n" +
+                        "?artist rdf:type :Artist.\n" +
+                        "?track :playedBy ?artist.\n" +
+                        "?artist :hasName \""+queryToken+"\"." +
+                        "}";
+                System.out.println(queryString);
+                System.out.println("------------------");
+
+                Dataset dataset = DatasetFactory.create(musicOntology.ontModel);
+                Query query = QueryFactory.create(queryString);
+
+                QueryExecution qexec = SparqlDLExecutionFactory.create(query, dataset);
+                ResultSet resultSet = qexec.execSelect();
+
+
+                while (resultSet.hasNext()){
+                    QuerySolution row = (QuerySolution) resultSet.next();
+
+                    RDFNode track = row.get("track");
+                    System.out.println("-> "+track.toString());
+
+
+                    ExtendedIterator iterator = track.asResource().listProperties();
+
+                    while(iterator.hasNext()){
+                        StatementImpl mp = (StatementImpl) iterator.next();
+                        System.out.print(":" + mp.getPredicate().getLocalName() + " ");
+                        /// subject :sameAs literal or resource
+
+                        RDFNode object = mp.getObject();
+
+                        if (object instanceof Literal) {
+                            // object is a literal
+                            System.out.print(" \"" + object.toString() + "\"");
+                        } else {
+
+                            System.out.print(object.toString());
+
+                        }
+                        System.out.println();
+
+                    }
+
+                }
+
+            }
+            else{
+                System.out.println(queryToken + " is not a valid token!");
+
+            }
+        }
+
+
+
+
+        return results;
+    }
+}

@@ -19,15 +19,18 @@
  */
 public class Utils {
     public static String cleanStringForOnto(String string){
-        string.replace("[","");
-        string.replace("]","");
-        string.replace("#","");
-        string.replace(">","");
-        string.replace("%","");
-        string.replace("\"","");
-        string.replace(")","");
-        string.replace(".","");
-        string.replace(" ","");
+        string = string.replace("[","");
+        string = string.replace("]","");
+        string = string.replace("#","");
+        string = string.replace(">","");
+        string = string.replace("%","");
+        string = string.replace("\"","");
+        string = string.replace(" ","");
+        string = string.replace(".","");
+        string = string.replace("'","");
+//        string = string.replace("I","i");
+
+
         return string;
 
     }
