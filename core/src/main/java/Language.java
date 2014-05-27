@@ -40,8 +40,7 @@ class SExpr{
     SExpr(String value) throws ParserConfigurationException, ParseException, SAXException, PropertyListFormatException, IOException {
         this.value = value;
         tracks = new ArrayList<Track>();
-        //QueryEngine queryEngine = new QueryEngine(value,new MusicOntology());
-        //tracks = queryEngine.getResults();
+
     }
 
 }
@@ -53,16 +52,21 @@ public class Language {
         // (playedBy:Metallica and playedBy:ACDC)
 
         // print LISP-style tree }
-        String test = "(playedBy:Metallica & playedBy:ACDC)";
+        String test = "(playedBy:Metallica | playedBy:AC/DC)";
         String test2 = "(playedBy:Metallica | (playedBy:Metallica & playedBy:ACDC))";
 
         Language l = new Language();
         MusicboxParser parser = l.parse(test);
         //l.print_AST(parser);
-        l.eval(parser.start());
+        SExpr sExpr = l.eval(parser.start());
+        System.out.println("COUNT: "+sExpr.tracks.size());
+        for (Track track : sExpr.tracks) {
+            System.out.println(track);
+        }
 
-        Language l2 = new Language();
-        MusicboxParser parser2 = l2.parse(test2);
+
+        //Language l2 = new Language();
+        //MusicboxParser parser2 = l2.parse(test2);
         //l2.print_AST(parser2);
         //l.eval(parser.start());
 
@@ -91,31 +95,53 @@ public class Language {
     }
 
     public SExpr eval (ParseTree tree) throws Exception{
+        System.out.println(tree.getClass());
+//        System.out.println(tree.getChild(1).getClass());
+//        System.out.println(tree.getChild(2).getClass());
+//        System.out.println(tree.getChild(3).getClass());
+
         if (tree instanceof TerminalNodeImpl){
-            return new SExpr(tree.toString());
+            SExpr sexpr =  new SExpr(tree.toString());
+            String[] tokens = sexpr.value.split(":");
+            String action = tokens[0];
+            String term = tokens[1];
+            System.out.println("Searching relation: "+action );
+            System.out.println("With term: "+ term);
+            QueryEngine queryEngine = new QueryEngine(term,new MusicOntology());
+            ArrayList<Track> tracks = queryEngine.getResults();
+            System.out.println("GOT: "+tracks.size());
+            sexpr.tracks = tracks;
+            return sexpr;
         }
         else {
+            if (tree.getChildCount() == 1){
+                System.out.println("the start tag");
+                return (eval(tree.getChild(0)));
+            }
             if (tree.getChild(2).toString().equalsIgnoreCase("&")){
                 //and operation
+                SExpr left_evaled = eval(tree.getChild(1));
+                SExpr right_evaled = eval(tree.getChild(3));
 
+                SExpr sexpr = new SExpr(tree.getChild(1).toString() + " and " + tree.getChild(1).toString());
+                sexpr.tracks = (ArrayList<Track>) intersection(left_evaled.tracks, right_evaled.tracks);
 
+                return sexpr;
             }
             else if (tree.getChild(2).toString().equalsIgnoreCase("|")){
                 //or operation
 
+                SExpr left_evaled = eval(tree.getChild(1));
+                SExpr right_evaled = eval(tree.getChild(3));
+
+                SExpr sexpr = new SExpr(tree.getChild(1).toString() + " or " + tree.getChild(1).toString());
+                sexpr.tracks = (ArrayList<Track>) union(left_evaled.tracks, right_evaled.tracks);
+
+                return sexpr;
+
             }
 
         }
-
-
-        System.out.println(tree.getChildCount());
-        System.out.println(tree.getChild(1).getClass());
-        System.out.println(tree.getChild(2).getClass());
-        System.out.println(tree.getChild(3).getClass());
-
-        System.out.println(tree.getChild(1).toString());
-        System.out.println(tree.getChild(2).toString());
-        System.out.println(tree.getChild(3).toString());
 
         return null;
     }

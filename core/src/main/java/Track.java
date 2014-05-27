@@ -57,6 +57,8 @@ public class Track {
         this.title = title;
     }
 
-
-
+    @Override
+    public String toString() {
+        return this.title;
+    }
 }
