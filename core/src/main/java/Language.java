@@ -46,6 +46,11 @@ class SExpr{
 }
 
 public class Language {
+    public MusicOntology musicOntology;
+
+    public Language(MusicOntology musicOntology) {
+        this.musicOntology = musicOntology;
+    }
 
     public static void main(String[] args) throws Exception {
         // create a CharStream that reads from standard input
@@ -55,7 +60,8 @@ public class Language {
         String test = "(playedBy:Metallica | playedBy:AC/DC)";
         String test2 = "(playedBy:Metallica | (playedBy:Metallica & playedBy:ACDC))";
 
-        Language l = new Language();
+        MusicOntology ontology = new MusicOntology();
+        Language l = new Language(ontology);
         MusicboxParser parser = l.parse(test);
         //l.print_AST(parser);
         SExpr sExpr = l.eval(parser.start());
@@ -95,7 +101,7 @@ public class Language {
     }
 
     public SExpr eval (ParseTree tree) throws Exception{
-        System.out.println(tree.getClass());
+//        System.out.println(tree.getClass());
 //        System.out.println(tree.getChild(1).getClass());
 //        System.out.println(tree.getChild(2).getClass());
 //        System.out.println(tree.getChild(3).getClass());
@@ -107,7 +113,7 @@ public class Language {
             String term = tokens[1];
             System.out.println("Searching relation: "+action );
             System.out.println("With term: "+ term);
-            QueryEngine queryEngine = new QueryEngine(term,new MusicOntology());
+            QueryEngine queryEngine = new QueryEngine(term,musicOntology);
             ArrayList<Track> tracks = queryEngine.getResults();
             System.out.println("GOT: "+tracks.size());
             sexpr.tracks = tracks;

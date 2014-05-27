@@ -67,7 +67,7 @@ public class QueryEngine {
 
 
                 while (resultSet.hasNext()){
-                    QuerySolution row = (QuerySolution) resultSet.next();
+                    QuerySolution row = resultSet.next();
 
                     RDFNode track = row.get("track");
 
@@ -81,7 +81,7 @@ public class QueryEngine {
                         StatementImpl mp = (StatementImpl) iterator.next();
 
                         String relation = mp.getPredicate().getLocalName();
-                        String destination = "";
+                        String destination;
 
                         System.out.print(":" + relation + " ");
 

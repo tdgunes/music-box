@@ -7,9 +7,12 @@ import javax.swing.*;
 import javax.xml.parsers.ParserConfigurationException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.LinkedHashSet;
+import java.io.File;
 
 /**
  * Taha Dogan Gunes
@@ -34,7 +37,7 @@ public class MusicBoxView extends JFrame {
     protected JList<String> albumList;
     protected JList<String> artistList;
 
-    private JTextField playedByMetallicaACDCTextField;
+    private JTextField playedByTextField;
     private JButton generateButton;
     private JComboBox comboBox1;
     private JComboBox comboBox2;
@@ -44,6 +47,7 @@ public class MusicBoxView extends JFrame {
     private JList list3;
     private JButton aboutButton;
     private JComboBox comboBox3;
+    private MusicOntology ontology;
 
 
     public DefaultListModel<String> onAlbumModel;
@@ -52,9 +56,9 @@ public class MusicBoxView extends JFrame {
 
 
 
-    public MusicBoxView() throws ParserConfigurationException, ParseException, SAXException, PropertyListFormatException, IOException {
+    public MusicBoxView(JFrame frame) throws ParserConfigurationException, ParseException, SAXException, PropertyListFormatException, IOException {
 
-        MusicOntology ontology = new MusicOntology();
+        ontology =new MusicOntology();
 
         LinkedHashSet<String> hashSet = new LinkedHashSet<String>();
 
@@ -114,11 +118,54 @@ public class MusicBoxView extends JFrame {
         });
 
 
+        generateButton.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e)
+            {
+                JFileChooser fc = new JFileChooser();
+                int returnVal = fc.showSaveDialog(MusicBoxView.this);
+                if (returnVal == JFileChooser.APPROVE_OPTION) {
+
+                    Language l = new Language(ontology);
+                    try {
+                        MusicboxParser parser = l.parse(playedByTextField.getText());
+                        SExpr sExpr = l.eval(parser.start());
+                        int count = sExpr.tracks.size();
+                        System.out.println("COUNT: "+sExpr.tracks.size());
+
+
+                        File file = fc.getSelectedFile();
+
+                        PlaylistWriter playlistWriter = new PlaylistWriter(file.getAbsolutePath());
+                        for (Track track : sExpr.tracks) {
+                            playlistWriter.addSong(track.getTitle(),track.getPath(), track.getSeconds());
+                        };
+                        playlistWriter.write();
+
+
+                        System.out.println("Saving: " + file.getAbsolutePath() + "" );
+                        JOptionPane.showMessageDialog(null, ""+count+" track(s) found. And stored to\n"+ file.getAbsolutePath() );
+                    } catch (Exception e1) {
+
+                        e1.printStackTrace();
+                        JOptionPane.showMessageDialog(null, "An unexpected error has occurred, \n" +
+                                "please check the console for more details.");
+                    }
+
+
+                } else {
+                    System.out.println("Save command cancelled by user." );
+                }
+
+            }
+        });
+
     }
 
     public static void main(String[] args) throws PropertyListFormatException, ParserConfigurationException, SAXException, ParseException, IOException {
         JFrame frame = new JFrame("MusicBox");
-        frame.setContentPane(new MusicBoxView().contentPane);
+        MusicBoxView musicBoxView = new MusicBoxView(frame);
+        frame.setContentPane(musicBoxView.contentPane);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
@@ -132,8 +179,39 @@ public class MusicBoxView extends JFrame {
         hasGenreModel = new DefaultListModel<String>();
 
         list2 = new JList<String>(onAlbumModel);
+        list2.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent evt) {
+                JList list = (JList) evt.getSource();
+                if (evt.getClickCount() == 2) {
+                    int index = list.locationToIndex(evt.getPoint());
+                    System.out.println(onAlbumModel.getElementAt(index));
+                    playedByTextField.setText(playedByTextField.getText() + " " + "playedBy:" + onAlbumModel.getElementAt(index) + " |");
+                }
+            }
+        });
+
         list1 = new JList<String>(playedByModel);
+        list1.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent evt) {
+                JList list = (JList)evt.getSource();
+                if (evt.getClickCount() == 2) {
+                    int index = list.locationToIndex(evt.getPoint());
+                    System.out.println(playedByModel.getElementAt(index));
+                    playedByTextField.setText(playedByTextField.getText()+" "+"playedBy:"+playedByModel.getElementAt(index) + " |");
+                }
+            }
+        });
         list3 = new JList<String>(hasGenreModel);
+        list3.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent evt) {
+                JList list = (JList)evt.getSource();
+                if (evt.getClickCount() == 2) {
+                    int index = list.locationToIndex(evt.getPoint());
+                    System.out.println(hasGenreModel.getElementAt(index));
+                    playedByTextField.setText(playedByTextField.getText()+" "+"hasGenre:"+hasGenreModel.getElementAt(index) + " |");
+                }
+            }
+        });
 
     }
 }
