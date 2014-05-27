@@ -169,7 +169,7 @@ public class MusicOntology {
         XMLReader xmlReader = new XMLReader();
         ArrayList<HashMap> tracks = xmlReader.getTrackList();
 
-
+        int count = 0;
         for (HashMap hashMap : tracks) {
             try {
                 String rawTrack = Utils.cleanStringForOnto(hashMap.get("Name").toString());
@@ -177,7 +177,7 @@ public class MusicOntology {
                 String rawTrackID = hashMap.get("Track ID").toString();
                 String rawLocation = hashMap.get("Location").toString();
                 String rawTotalTime = hashMap.get("Total Time").toString();
-                String rawGenre = hashMap.get("Genre").toString();
+                String rawGenre = Utils.cleanStringForOnto(hashMap.get("Genre").toString());
                 String rawAlbum = Utils.cleanStringForOnto(hashMap.get("Album").toString());
 
                 System.out.println("Track: " + rawTrack);
@@ -231,12 +231,12 @@ public class MusicOntology {
                 Statement trackHasTotalTime = ontModel.createStatement(trackIndividual, hasTotalTime, totalTime);
                 ontModel.add(trackHasTotalTime);
 
-
+                count++;
             } catch (NullPointerException exception) {
                 continue;
             }
         }
-        System.out.println("Total tracks: " + tracks.size());
+        System.out.println("Total tracks: " + count);
     }
 
 

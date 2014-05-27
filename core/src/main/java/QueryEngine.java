@@ -27,14 +27,14 @@ import java.util.ArrayList;
  * THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 public class QueryEngine {
-    private String playlistName;
+
     private String query;
     private MusicOntology musicOntology;
 
-    public QueryEngine(String query, MusicOntology musicOntology, String playlistName) {
+    public QueryEngine(String query, MusicOntology musicOntology) {
         this.query = query;
         this.musicOntology = musicOntology;
-        this.playlistName = playlistName;
+
     }
 
     public ArrayList<Track> getResults(){

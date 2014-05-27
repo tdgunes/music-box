@@ -14,5 +14,13 @@
             <artifactId>dd-plist</artifactId>
             <version>1.8</version> <!-- corresponds to r108 -->
         </dependency>
+        <dependency>
+            <groupId>org.antlr</groupId>
+            <artifactId>antlr4-runtime</artifactId>
+            <version>4.2</version>
+        </dependency>
+
     </dependencies>
+
+
 </project>
