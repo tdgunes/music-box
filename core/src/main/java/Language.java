@@ -71,10 +71,6 @@ public class Language {
         }
 
 
-        //Language l2 = new Language();
-        //MusicboxParser parser2 = l2.parse(test2);
-        //l2.print_AST(parser2);
-        //l.eval(parser.start());
 
 
     }
@@ -113,7 +109,7 @@ public class Language {
             String term = tokens[1];
             System.out.println("Searching relation: "+action );
             System.out.println("With term: "+ term);
-            QueryEngine queryEngine = new QueryEngine(term,musicOntology);
+            QueryEngine queryEngine = new QueryEngine(term, action,musicOntology);
             ArrayList<Track> tracks = queryEngine.getResults();
             System.out.println("GOT: "+tracks.size());
             sexpr.tracks = tracks;

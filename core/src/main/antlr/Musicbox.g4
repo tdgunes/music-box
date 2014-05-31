@@ -1,12 +1,12 @@
 grammar Musicbox;
 
 
-start  : '(' STRING (OPERATOR start)* ')' | STRING ;
+start  : '(' STRING (OPERATOR start)* ')' | STRING |  '(' (start OPERATOR)* STRING  ')' ;
 
  //"(playedBy:Metallica & (playedBy:Metallica | playedBy:ACDC))";
 
 OPERATOR: '|' | '&';
-STRING :  ('a'..'z' | 'A'..'Z' | ':' | '/')+;
+STRING :  ('a'..'z' | 'A'..'Z' | ':' | '/' | '-')+;
 WS  :   [ \t\n\r]+ -> skip ;
 
 

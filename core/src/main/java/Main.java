@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) throws ParserConfigurationException, ParseException, SAXException, PropertyListFormatException, IOException {
         MusicOntology musicOntology = new MusicOntology();
-	    QueryEngine queryEngine = new QueryEngine("AC/DC", musicOntology);
+	    QueryEngine queryEngine = new QueryEngine("AC/DC", "playedBy", musicOntology);
         PlaylistWriter playlistWriter = new PlaylistWriter("myACDCList.m3u");
         for (Track track : queryEngine.getResults()) {
             playlistWriter.addSong(track.getTitle(),track.getPath(), track.getSeconds());

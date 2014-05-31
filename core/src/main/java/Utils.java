@@ -25,7 +25,7 @@ public class Utils {
         string = string.replace(">","");
         string = string.replace("%","");
         string = string.replace("\"","");
-        string = string.replace(" ","");
+       //string = string.replace(" ","");
         string = string.replace(".","");
         string = string.replace("'","");
 //        string = string.replace("I","i");

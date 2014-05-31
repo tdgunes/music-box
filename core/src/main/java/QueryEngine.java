@@ -6,6 +6,7 @@ import com.hp.hpl.jena.rdf.model.impl.StatementImpl;
 import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Taha Dogan Gunes
@@ -30,11 +31,39 @@ public class QueryEngine {
 
     private String query;
     private MusicOntology musicOntology;
+    private String relation;
+    private String term;
+    private HashMap<String, String> relationToType;
 
-    public QueryEngine(String query, MusicOntology musicOntology) {
+
+
+    public QueryEngine(String query, String relation, MusicOntology musicOntology) {
+        relationToType = new HashMap<String, String>();
+        relationToType.put("playedBy", "Artist");
+        relationToType.put("onAlbum", "Album");
+        relationToType.put("hasGenre", "Genre");
         this.query = query;
+        this.relation = relation;
+        this.term = relationToType.get(relation);
         this.musicOntology = musicOntology;
 
+    }
+    public ArrayList<Track> handlePlayCount(String operator, int number){
+        ArrayList<Track> results = new ArrayList<Track>();
+
+        String queryString = "" +
+                "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+                "PREFIX : <" + musicOntology.ns + ">\n" +
+                "SELECT DISTINCT ?track WHERE \n" +
+                "{ ?track rdf:type :Track\n" +
+                "  FILTER (\n" +
+                "    ?count "+operator+" \" "+ number +"\"^^xsd:date &&\n" +
+                "  )\n" +
+                "}\n";
+
+
+
+        return results;
     }
 
     public ArrayList<Track> getResults(){
@@ -50,11 +79,11 @@ public class QueryEngine {
                 String queryString = "" +
                         "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
                         "PREFIX : <" + musicOntology.ns + ">\n" +
-                        "SELECT DISTINCT ?track WHERE {" +
+                        "SELECT DISTINCT ?track WHERE {\n" +
                         "?track rdf:type :Track.\n" +
-                        "?artist rdf:type :Artist.\n" +
-                        "?track :playedBy ?artist.\n" +
-                        "?artist :hasName \""+queryToken+"\"." +
+                        "?"+this.term.toLowerCase()+" rdf:type :"+this.term+".\n" +
+                        "?track :"+this.relation+" ?"+this.term.toLowerCase()+".\n" +
+                        "?"+this.term.toLowerCase()+" :hasName \""+queryToken+"\"." +
                         "}";
                 System.out.println(queryString);
                 System.out.println("------------------");
@@ -108,14 +137,15 @@ public class QueryEngine {
                         else if (relation.equalsIgnoreCase("hasTotalTime")){
                             song.setSeconds(destination);
                         }
+                        else if (relation.equalsIgnoreCase("playedBy")){
+                            song.setArtist(destination);
+                        }
 
                     }
                     results.add(song);
                 }
 
             }
-
-
 
 
 

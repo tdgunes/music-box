@@ -21,12 +21,22 @@ public class Track {
     private String title;
     private String path;
     private String seconds;
+    private String artist;
 
 
-    public Track(String title, String path, String seconds) {
+    public Track(String title, String path, String seconds, String artist) {
         this(title);
         this.path = path;
         this.seconds = seconds;
+        this.artist = artist;
+    }
+
+    public String getArtist() {
+        return artist;
+    }
+
+    public void setArtist(String artist) {
+        this.artist = artist;
     }
 
     public Track(String title) {

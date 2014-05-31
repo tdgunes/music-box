@@ -200,11 +200,17 @@ public class MusicOntology {
                 Statement trackHasName = ontModel.createStatement(trackIndividual, hasName, trackName);
                 ontModel.add(trackHasName);
 
+
                 //artistIndividual :hasName "artistName"
                 Literal artistName = ontModel.createTypedLiteral(rawArtist, XSDDatatype.XSDstring);
                 Statement artistHasName = ontModel.createStatement(artistIndividual, hasName, artistName);
                 ontModel.add(artistHasName);
 
+
+                //genreIndividual :hasName "genreName"
+                Literal genreName = ontModel.createTypedLiteral(rawGenre, XSDDatatype.XSDstring);
+                Statement genreHasName = ontModel.createStatement(genreIndividual, hasName, genreName);
+                ontModel.add(genreHasName);
 
 
                 //trackIndividual :playedBy artistIndividual

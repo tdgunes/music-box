@@ -5,14 +5,18 @@ import org.xml.sax.SAXException;
 
 import javax.swing.*;
 import javax.xml.parsers.ParserConfigurationException;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.text.ParseException;
 import java.util.LinkedHashSet;
-import java.io.File;
 
 /**
  * Taha Dogan Gunes
@@ -37,7 +41,7 @@ public class MusicBoxView extends JFrame {
     protected JList<String> albumList;
     protected JList<String> artistList;
 
-    private JTextField playedByTextField;
+
     private JButton generateButton;
     private JComboBox comboBox1;
     private JComboBox comboBox2;
@@ -47,13 +51,17 @@ public class MusicBoxView extends JFrame {
     private JList list3;
     private JButton aboutButton;
     private JComboBox comboBox3;
+    private JButton leftParButton;
+    private JButton rigthParButton;
+    private JButton andButton;
+    private JButton orButton;
+    private JTextArea requestTextArea;
+    private JButton clearButton;
     private MusicOntology ontology;
-
 
     public DefaultListModel<String> onAlbumModel;
     public DefaultListModel<String> playedByModel;
     public DefaultListModel<String> hasGenreModel;
-
 
 
     public MusicBoxView(JFrame frame) throws ParserConfigurationException, ParseException, SAXException, PropertyListFormatException, IOException {
@@ -122,44 +130,100 @@ public class MusicBoxView extends JFrame {
 
             public void actionPerformed(ActionEvent e)
             {
-                JFileChooser fc = new JFileChooser();
-                int returnVal = fc.showSaveDialog(MusicBoxView.this);
-                if (returnVal == JFileChooser.APPROVE_OPTION) {
-
-                    Language l = new Language(ontology);
-                    try {
-                        MusicboxParser parser = l.parse(playedByTextField.getText());
-                        SExpr sExpr = l.eval(parser.start());
-                        int count = sExpr.tracks.size();
-                        System.out.println("COUNT: "+sExpr.tracks.size());
 
 
-                        File file = fc.getSelectedFile();
 
-                        PlaylistWriter playlistWriter = new PlaylistWriter(file.getAbsolutePath());
-                        for (Track track : sExpr.tracks) {
-                            playlistWriter.addSong(track.getTitle(),track.getPath(), track.getSeconds());
-                        };
-                        playlistWriter.write();
+                Language l = new Language(ontology);
+                MusicboxParser parser = l.parse(requestTextArea.getText());
+                SExpr sExpr = null;
+                try {
+                    sExpr = l.eval(parser.start());
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                    JOptionPane.showMessageDialog(null, "An unexpected error has occurred while parsing your request, \n" +
+                            "please check the console for more details.");
+                    e1.printStackTrace();
+                }
+
+                int count = sExpr.tracks.size();
+                System.out.println("COUNT: "+sExpr.tracks.size());
+                if (count != 0) {
+                    TrackListView dialog = new TrackListView(sExpr.tracks);
+                    dialog.pack();
+                    dialog.setVisible(true);
 
 
-                        System.out.println("Saving: " + file.getAbsolutePath() + "" );
-                        JOptionPane.showMessageDialog(null, ""+count+" track(s) found. And stored to\n"+ file.getAbsolutePath() );
-                    } catch (Exception e1) {
-
-                        e1.printStackTrace();
-                        JOptionPane.showMessageDialog(null, "An unexpected error has occurred, \n" +
-                                "please check the console for more details.");
-                    }
+                }
+                else {
+                    JOptionPane.showMessageDialog(null,"Unable to find any songs according to your request! \n" );
+                }
+            }
 
 
-                } else {
-                    System.out.println("Save command cancelled by user." );
+        });
+
+        requestTextArea.setCaretPosition(1);
+        leftParButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                requestTextArea.insert(" (", requestTextArea.getCaretPosition());
+
+            }
+        });
+        rigthParButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                requestTextArea.insert(" )", requestTextArea.getCaretPosition());
+            }
+        });
+
+
+        andButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                requestTextArea.insert(" &", requestTextArea.getCaretPosition());
+            }
+        });
+        orButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                requestTextArea.insert(" |", requestTextArea.getCaretPosition());
+            }
+        });
+
+
+        aboutButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    URL aboutPage = new URL("https://github.com/tdgunes/music-bot");
+                    openWebpage(aboutPage);
+
+                } catch (MalformedURLException e1) {
+                    e1.printStackTrace();
                 }
 
             }
         });
+    }
 
+    public static void openWebpage(URI uri) {
+        Desktop desktop = Desktop.isDesktopSupported() ? Desktop.getDesktop() : null;
+        if (desktop != null && desktop.isSupported(Desktop.Action.BROWSE)) {
+            try {
+                desktop.browse(uri);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static void openWebpage(URL url) {
+        try {
+            openWebpage(url.toURI());
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) throws PropertyListFormatException, ParserConfigurationException, SAXException, ParseException, IOException {
@@ -185,7 +249,8 @@ public class MusicBoxView extends JFrame {
                 if (evt.getClickCount() == 2) {
                     int index = list.locationToIndex(evt.getPoint());
                     System.out.println(onAlbumModel.getElementAt(index));
-                    playedByTextField.setText(playedByTextField.getText() + " " + "playedBy:" + onAlbumModel.getElementAt(index) + " |");
+                    requestTextArea.insert(" " + "onAlbum:" + onAlbumModel.getElementAt(index), requestTextArea.getCaretPosition());
+
                 }
             }
         });
@@ -197,7 +262,8 @@ public class MusicBoxView extends JFrame {
                 if (evt.getClickCount() == 2) {
                     int index = list.locationToIndex(evt.getPoint());
                     System.out.println(playedByModel.getElementAt(index));
-                    playedByTextField.setText(playedByTextField.getText()+" "+"playedBy:"+playedByModel.getElementAt(index) + " |");
+                    requestTextArea.insert(" " + "playedBy:" + playedByModel.getElementAt(index), requestTextArea.getCaretPosition());
+
                 }
             }
         });
@@ -208,7 +274,7 @@ public class MusicBoxView extends JFrame {
                 if (evt.getClickCount() == 2) {
                     int index = list.locationToIndex(evt.getPoint());
                     System.out.println(hasGenreModel.getElementAt(index));
-                    playedByTextField.setText(playedByTextField.getText()+" "+"hasGenre:"+hasGenreModel.getElementAt(index) + " |");
+                    requestTextArea.insert(" " + "hasGenre:" + hasGenreModel.getElementAt(index), requestTextArea.getCaretPosition());
                 }
             }
         });
