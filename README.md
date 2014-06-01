@@ -1,4 +1,4 @@
-music-bot
+music-box
 =========
 
-The bot that, intelligently creates playlists by your own taste.
+The bot that, intelligently creates playlists by your own preferences and tastes.
